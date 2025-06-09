@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            3rd Page...
+        </title>
+    </head>
+    <style type="text/css">
+        body
+        {
+            background:#78c4c7;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align:center;
+        } 
+        </style>
+        <body>
+            <form name=str2 action="">
+                <h1><u>Convert original string characters to UpperCase characters  </u></h1>
+                &nbsp;<br>
+                <input type="label" id="l1" value="Enter Your String"> =<input type="text" id="box1"><br>
+                &nbsp;<br>
+                <input type="button" id="check" value="Convert" onclick="upperconvert()">  <input type="Reset" id="re3" value="Reset" onclick="document.forms.str2.reset()/">
+                &nbsp;<br>
+                &nbsp;<br>
+                <b>UpperCase character string of entered string</b> =<input type="text" id="box2"><br>
+                &nbsp;<br>
+                &nbsp;<br>
+                <b><hr></b>
+                  <b><hr></b>
+                  &nbsp;<br>
+
+                  <h1><u>Convert original string characters to LowerCase characters  </u></h1>
+                &nbsp;<br>
+                <input type="label" id="l2" value="Enter Your String"> =<input type="text" id="box3"><br>
+                &nbsp;<br>
+                <input type="button" id="check" value="Convert" onclick="lowerconvert()">  <input type="Reset" id="re3" value="Reset" onclick="document.forms.str2.reset()/">
+                &nbsp;<br>
+                &nbsp;<br>
+                <b>LowerCase character string of entered string</b> =<input type="text" id="box4"><br>
+                &nbsp;<br>
+                  <b><hr></b>
+                  <b><hr></b>
+                  &nbsp;<br>
+                  &nbsp;<br>
+                  <input type="button" id="btnpre" value="Previous Page" onclick="previous()"> <input type="button" id="btnnxt" value="Next Page" onclick="next()">
+            </form>
+            <script>
+                function upperconvert()
+                {
+                    var a=document.getElementById("box1").value
+                    var b=a.toUpperCase();
+                    document.getElementById("box2").value=b
+                }
+                function lowerconvert()
+                {
+                    var c=document.getElementById("box3").value
+                    var d=c.toLowerCase();
+                    document.getElementById("box4").value=d
+                }
+                function previous()
+                {
+                 document.location.href="2.html";
+                }
+            function next()
+                {
+                 document.location.href="4.html";
+                 }
+            </script>
+        </body>
+</html>

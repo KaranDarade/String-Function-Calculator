@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>
+            5th Page...
+        </title>
+    </head>
+    <style type="text/css">
+        body
+        {
+            background:#78c4c7;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align:center;
+        } 
+        </style>
+        <body>
+            <form name=str4 action="">
+                <h1><u>Finding a unicode of a character(charCodeAt function) </u></h1>
+                &nbsp;<br>
+                <input type="label" id="l1" value="Enter Your String"> =<input type="text" id="box1"><br>
+                &nbsp;<br>
+                <b>Enter index no. of character to find out its unicode: </b> =<input type="text" id="box2"><br>
+                &nbsp;<br>
+                <input type="button" id="Create3" value="Print" onclick="uni()">  <input type="Reset" id="re5" value="Reset" onclick="document.forms.str4.reset()/">
+                &nbsp;<br>
+                &nbsp;<br>
+                <b><u>Unicode of entered index character is:</u></b>  <input type="text" id="box3"><br>
+                &nbsp;<br>
+                &nbsp;<br>
+                <b><hr></b>
+                
+                <h1><u>Dividing Text(Split function) </u></h1>
+                &nbsp;<br>
+                <b>Enter your string</b> =<input type="text" id="box4"><br>
+                &nbsp;<br>
+                
+                <b>Enter character from which string divides</b> =<input type="text" id="box5"><br>
+                &nbsp;<br>
+                <input type="button" id="Create4" value="Divide" onclick="divide()">  <input type="Reset" id="re6" value="Reset" onclick="document.forms.str4.reset()/">
+                
+                &nbsp;<br>
+                &nbsp;<br>
+                <b>Divided strings are:</b> <input type="text" id="box6">
+                
+                &nbsp;<br>
+                &nbsp;<br>
+                <b><hr></b>
+                <b><hr></b>
+                <input type="button" id="btnpre2" value="Previous Page" onclick="previous()"> 
+
+            </form>
+            <script>
+                function uni()
+                {
+                    var txt=document.getElementById("box1").value
+                    var a=document.getElementById("box2").value
+                    var b=txt.charCodeAt(a);
+                    document.getElementById("box3").value=b
+                }
+                function divide()
+                {
+                   var c=document.getElementById("box4").value
+                   var d=document.getElementById("box5").value
+                   var e=c.split(d);
+                   document.getElementById("box6").value=e
+                }
+                function previous()
+                {
+                 document.location.href="4.html";
+                }
+            </script>
+        </body>
+</html>

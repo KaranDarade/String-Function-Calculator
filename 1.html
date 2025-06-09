@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            1st Page...
+        </title>
+    </head>
+    <style type="text/css">
+    body
+    {
+        background:#78c4c7;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align:center;
+    } 
+    </style>
+    <body>
+        <form name=str action="">
+            <h1><u>Enter strings to concatenate </u>:</h1>
+            &nbsp;<br>
+            &nbsp;<br>
+        <input type="label" id="e1" value="Enter First String"> =<input type="text" id="txt1"><br>
+        
+        &nbsp;<br>
+       <input type="label" id="e2" value="Enter Second String">=<input type="text" id="txt2"><br>
+        &nbsp;<br>
+        <input type="button" id="but" value="Concat" onclick="concat()">  <input type="Reset" id="re" value="Reset" onclick="document.forms.str.reset()/">
+        &nbsp;<br>
+        &nbsp;<br>
+        <b>Combined String</b>=<input type="text" id="txt3"><br> 
+        &nbsp;<br>
+        &nbsp;<br>
+        
+        <b><hr></b>
+        <b><hr></b>
+       <h1> <u>Enter string to find its length </u>:</h1>
+        &nbsp;<br>
+        &nbsp;<br>
+        <input type="label" id="e3" value="Enter String"> =<input type="text" id="txt4"><br>
+        &nbsp;<br>
+        <input type="button" id="btn" value="Find" onclick="l()">  <input type="Reset" id="re1" value="Reset" onclick="document.forms.str.reset()/">
+        &nbsp;<br>
+        &nbsp;<br>
+        <b>Length of entered string:</b><input type="text" id="txt5"><br>
+       &nbsp;<br>
+        <hr>
+        &nbsp;<br>
+        <input type="button" id="btnnxt" value="Next Page" onclick="next2()"> 
+        </form>
+        <script>
+            function concat()
+            {
+                var a=document.getElementById("txt1").value
+                var b=document.getElementById("txt2").value
+                var c=a.concat(b);
+                document.getElementById("txt3").value=c
+            }
+            function l()
+            {
+                var txt=document.getElementById("txt4").value
+                var f=txt.length;
+                document.getElementById("txt5").value=f
+
+            }
+            function next2()
+            {
+                 document.location.href="2.html";
+            }
+        </script>
+    </body>
+</html>

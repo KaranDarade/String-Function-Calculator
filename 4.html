@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>
+            4th Page...
+        </title>
+    </head>
+    <style type="text/css">
+        body
+        {
+            background:#78c4c7;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align:center;
+        } 
+        </style>
+        <body>
+            <form name=str3 action="">
+                <h1><u>Printing a substring from original string (substr function) </u></h1>
+                &nbsp;<br>
+                <input type="label" id="l1" value="Enter Your String"> =<input type="text" id="box1"><br>
+                &nbsp;<br>
+                <input type="button" id="last" value="Print LastIndex" onclick="lastindex()"> = <input type="text" id="box2"><br>
+                &nbsp;<br>
+                <b>Enter starting index: </b> =<input type="text" id="box3"><br>
+                &nbsp;<br>
+                <b>No of Characters to be printed from starting index: </b> =<input type="text" id="box4"><br>
+                &nbsp;<br>
+                &nbsp;<br>
+                <input type="button" id="Create" value="Print" onclick="substr()">  <input type="Reset" id="re4" value="Reset" onclick="document.forms.str3.reset()/">
+                &nbsp;<br>
+                &nbsp;<br>
+                <b>Substring is :</b>  <input type="text" id="box5"><br>
+                  <b><hr></b>
+                  <b><hr></b>
+                  
+                  <h1><u>Printing a substring between starting & ending index (substring function) </u></h1>
+                  <input type="label" id="l2" value="Enter Your String"> =<input type="text" id="box6"><br>
+                  &nbsp;<br>
+                  <b><u>Enter Starting index:</u></b> <input type="text" id="box7"><br>
+                  &nbsp;<br>
+                  <b><u>Enter Ending index:</u></b> <input type="text" id="box8"><br>
+                  &nbsp;<br>
+                  <input type="button" id="Create1" value="Print" onclick="substring()">  <input type="Reset" id="re5" value="Reset" onclick="document.forms.str3.reset()/">
+                &nbsp;<br>
+                &nbsp;<br>
+                <b>Substring is:</b> <input type="text" id="box9"><br>
+                
+                &nbsp;<br>
+               
+                <b><hr></b>
+                <input type="button" id="btnpre1" value="Previous Page" onclick="previous()"> <input type="button" id="btnnx1" value="Next Page" onclick="next()">
+                </form>
+                <script>
+                function lastindex()
+                {
+                    var g=document.getElementById("box1").value
+                    var e=g.length-1;
+                    document.getElementById("box2").value=e
+                }
+                 function substr()
+                 {
+                    var a=document.getElementById("box1").value
+                    var b=document.getElementById("box3").value
+                    var c=document.getElementById("box4").value
+                    var d=a.substr(b,c);
+                    document.getElementById("box5").value=d
+                 }
+                 function substring()
+                 {
+                     var x=document.getElementById("box6").value
+                     var y=document.getElementById("box7").value
+                     var z=document.getElementById("box8").value
+                     var k=x.substring(y,z);
+                     document.getElementById("box9").value=k
+                 }
+                 function previous()
+                {
+                 document.location.href="3.html";
+                }
+                 function next()
+                {
+                 document.location.href="5.html";
+                }
+                </script>
+        </body>
+</html>

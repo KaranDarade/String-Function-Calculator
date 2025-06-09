@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>
+            2nd Page...
+        </title>
+    </head>
+    <style type="text/css">
+        body
+        {
+            background:#78c4c7;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align:center;
+        } 
+        </style>
+    <body>
+        <form name=str1 action="">
+            <h1><u>Retriving a character from given position </u>:</h1>
+            &nbsp;<br>
+            &nbsp;<br>
+            <input type="label" id="l1" value="Enter Your String"> =<input type="text" id="box1"><br>
+        
+        &nbsp;<br>
+        <b>Enter index no.to find out which chracter is on that position</b> =<input type="text" id="box2"> <br>
+        &nbsp;<br><input type="button" id="check" value="Check" onclick="checkchar()">  <input type="Reset" id="re2" value="Reset" onclick="document.forms.str1.reset()/">
+        &nbsp;<br>
+        &nbsp;<br>
+        <b>Character is:</b><input type="text" id="box3">
+        
+        <b><hr></b>
+        
+        <h1>However, you can also find out index no. of given chracter</h1>
+        <br>
+        <input type="label" id="l2" value="Enter Your String"> =<input type="text" id="box4"><br>
+        &nbsp;<br>
+        <b>Enter character to find out on which index position it is:</b> =<input type="text" id="box5"> <br>
+        &nbsp;<br><input type="button" id="check1" value="Check" onclick="checkpos()">  <input type="Reset" id="re3" value="Reset" onclick="document.forms.str1.reset()/">
+        &nbsp;<br>
+        &nbsp;<br>
+        <b>Your entered character found at index:</b><input type="text" id="box6">
+        
+        <b><hr></b>
+        &nbsp;<br>
+        &nbsp;<br>
+        <input type="button" id="btnpre" value="Previous Page" onclick="previous()"> <input type="button" id="btnnxt" value="Next Page" onclick="next()">
+        </form>
+        <script>
+            function checkchar()
+            {
+                var a=document.getElementById("box1").value
+                var b=document.getElementById("box2").value
+                var c=a.charAt(b);
+                document.getElementById("box3").value=c
+            }
+            function checkpos()
+            {
+                var d=document.getElementById("box4").value
+                var e=document.getElementById("box5").value
+                var f=d.search(e);
+                document.getElementById("box6").value=f
+            }
+            function previous()
+            {
+                 document.location.href="1.html";
+            }
+            function next()
+            {
+                 document.location.href="3.html";
+            }
+
+        </script>
+    </body>
+</html>
